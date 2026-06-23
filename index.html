@@ -3,42 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CineView</title>
+  <title>CineLand - Premium Slider</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header class="header">
-    <div class="logo">🎬 CineView</div>
+    <div class="logo"> <span>Cine</span>Land</div>
     <nav class="nav-links">
       <a href="#" id="homeLink">Home</a>
-      <a href="#" id="popularLink">Popular</a>
+      <a href="#" id="popularLink">Movies</a>
       <a href="#" id="topRatedLink">Top Rated</a>
     </nav>
-    <div class="search-box">
-      <input id="searchInput" type="text" placeholder="Search movies...">
-      <button id="searchBtn">Search</button>
+    
+    <div class="search-wrapper">
+      <div class="rating-filter-box">
+        <select id="ratingFilter" aria-label="Filter by Minimum Rating">
+          <option value="0">All Ratings</option>
+          <option value="8">⭐⭐⭐⭐⭐ (8+/10)</option>
+          <option value="6">⭐⭐⭐⭐ (6+/10)</option>
+          <option value="4">⭐⭐⭐ (4+/10)</option>
+          <option value="2">⭐⭐ (2+/10)</option>
+        </select>
+      </div>
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Search movies...">
+        <button id="searchBtn" aria-label="Execute Search">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <section class="hero">
-    <h1>Discover Movies Like Never Before</h1>
-    <p>Trending • Popular • Top Rated</p>
+  <section id="heroCarousel" class="hero-carousel">
+    <div id="slidesContainer"></div>
+    
+    <div id="carouselDots" class="carousel-dots"></div>
   </section>
 
   <main class="container">
-    <h2 id="sectionTitle">🔥 Popular Movies</h2>
+    <h2 id="sectionTitle">Trending Now</h2>
     
     <div id="loader" class="loader hidden"></div>
-    
     <div id="statusMessage" class="status-message hidden"></div>
-
     <div id="movieGrid" class="movie-grid"></div>
   </main>
 
   <div id="modal" class="modal">
     <div class="modal-content">
-      <button id="closeBtn" aria-label="Close Modal">✕</button>
+      <button id="closeBtn" aria-label="Dismiss Close">
+        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
       <div id="movieDetails" class="details-layout"></div>
     </div>
   </div>
