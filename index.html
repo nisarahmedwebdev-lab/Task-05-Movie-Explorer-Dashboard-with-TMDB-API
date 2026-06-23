@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CineView Movie Explorer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+<div class="logo">
+🎬 CineView
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Popular</a>
+<a href="#">Top Rated</a>
+</nav>
+
+<div class="search-box">
+
+<input id="searchInput"type="text"placeholder="Search movies...">
+
+<button id="searchBtn">
+Search
+</button>
+
+</div>
+
+</header>
+
+<main>
+
+<h2>Popular Movies</h2>
+
+
+<div id="movieGrid" class="movie-grid">
+
+</div>
+
+</main>
+
+<!-- Modal -->
+
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<button id="closeBtn">✕</button>
+
+
+<div id="movieDetails"></div>
+
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
