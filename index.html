@@ -1,62 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CineView Movie Explorer</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineView</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="header">
-<div class="logo">
-🎬 CineView
-</div>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Popular</a>
-<a href="#">Top Rated</a>
-</nav>
+  <header class="header">
+    <div class="logo">🎬 CineView</div>
+    <nav class="nav-links">
+      <a href="#" id="homeLink">Home</a>
+      <a href="#" id="popularLink">Popular</a>
+      <a href="#" id="topRatedLink">Top Rated</a>
+    </nav>
+    <div class="search-box">
+      <input id="searchInput" type="text" placeholder="Search movies...">
+      <button id="searchBtn">Search</button>
+    </div>
+  </header>
 
-<div class="search-box">
+  <section class="hero">
+    <h1>Discover Movies Like Never Before</h1>
+    <p>Trending • Popular • Top Rated</p>
+  </section>
 
-<input id="searchInput"type="text"placeholder="Search movies...">
+  <main class="container">
+    <h2 id="sectionTitle">🔥 Popular Movies</h2>
+    
+    <div id="loader" class="loader hidden"></div>
+    
+    <div id="statusMessage" class="status-message hidden"></div>
 
-<button id="searchBtn">
-Search
-</button>
+    <div id="movieGrid" class="movie-grid"></div>
+  </main>
 
-</div>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button id="closeBtn" aria-label="Close Modal">✕</button>
+      <div id="movieDetails" class="details-layout"></div>
+    </div>
+  </div>
 
-</header>
-
-<main>
-
-<h2>Popular Movies</h2>
-
-
-<div id="movieGrid" class="movie-grid">
-
-</div>
-
-</main>
-
-<!-- Modal -->
-
-<div id="modal" class="modal">
-
-<div class="modal-content">
-
-<button id="closeBtn">✕</button>
-
-
-<div id="movieDetails"></div>
-
-
-</div>
-
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
