@@ -52,7 +52,7 @@ async function fetchMovies(url, title, initSlider = false) {
     applyCurrentFilters();
   } catch (error) {
     showLoader(false);
-    showStatus("API Error. Failed to capture resource items.", true);
+    showStatus("network error.", true);
   }
 }
 
